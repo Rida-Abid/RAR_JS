@@ -1,15 +1,17 @@
 ﻿var words = [];
-words = prompt("Enter your numbers").split(" ");
+words = prompt("Enter Words").split(" ");
 Main(words);
 
 function Main(words) {
-    if ((words.length < 2) && (typeof words !== 'string')) {
+    if (words.length < 2) {
         console.error('Enter atleast 2 words');
         console.log('usage: Enter words for the list');
+        return;
     }
 
-    if ((typeof words === 'number')) {
-        console.log('Enter words not numbers');
+    if (typeof (words) !== 'string') {
+        console.log('Enter words not numbers or characters');
+        return;
     }
     else {
         function ReversedList(words) {
