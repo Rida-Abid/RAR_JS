@@ -8,7 +8,9 @@ function Main(words) {
         console.log('usage: Enter words for the list');
     }
 
-   
+    if ((typeof words === 'number')) {
+        console.log('Enter words not numbers');
+    }
     else {
         function ReversedList(words) {
             words.reverse();
